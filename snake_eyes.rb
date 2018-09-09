@@ -1,26 +1,31 @@
 class SnakeEyes
 
-	attr_reader :side, :answer
 	
-	def initialize
-		@side = side
-		@answer = answer
-	end
+	# def initialize
+	# 	@side = side
+	# 	@answer = answer
+	# end
 
 	def side
-		side = (Random.rand(6))
+		@side = (Random.rand(6))
 		#puts side
 	end
 
 	def roll(input)
 		puts "How many times would you like to roll the dice? "
-		answer = input
-		puts answer
+		@answer = input
+		puts @answer.to_i
 	end
 
 	def result
-		number = answer.times.map{@side}
-		print number
+		count = 0
+		until count = @answer do
+			puts @side
+			count = count + 1			
+		end
+		
+		
+		
 	end
 
 
@@ -37,6 +42,7 @@ class SnakeEyes
 end
 
 dice_roll = SnakeEyes.new
+dice_roll.side
 dice_roll.roll(6)
 dice_roll.result
 #dice_roll.side
