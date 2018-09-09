@@ -1,0 +1,63 @@
+/*******************************
+fonts
+*****************************/
+
+/*@font-face{
+font-family: 'proximanova-regular';
+src: url('fonts/proximanova-regular.otf');
+
+}*/
+
+/*****************************
+change box sizing on all elements
+Read why here: http://blog.teamtreehouse.com/box-sizing-secret-simple-css-layouts
+*****************************/
+
+/**, *:before *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}*/
+
+/***************************
+The clearfix hack
+Read more about it here: https://css-tricks.com/snippets/css/clear-fix/
+****************************/
+
+/*.group:after*/
+.main-header-logo{
+height: 80px;
+}
+.main-nav-link{
+text-decoration: none;
+text-transform: uppercase;
+}
+.main-nav{ 
+float: right;
+padding: 50px;
+}
+body{
+background-color: blue;
+}
+header{
+background-color: yellow;
+padding: 30px;
+}
+.link-boxes{
+background-color: grey; 
+display: flex;
+}
+.hero{
+background-image: url(students-bg-cropped.jpg);
+text-align: center;
+padding: 155px;
+}
+.hero-title{
+height: 10px;
+}
+.hero-tagline{
+line-height: 1.6;
+text-align: center;
+margin: 0 auto;
+}
+
