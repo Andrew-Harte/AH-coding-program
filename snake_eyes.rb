@@ -8,21 +8,30 @@ class SnakeEyes
 
 	def side
 		@side = (Random.rand(6))
-		#puts side
+		#puts @side
 	end
 
-	def roll(input)
-		puts "How many times would you like to roll the dice? "
+	def roll_number(input)
 		@answer = input
-		puts @answer.to_i
+		puts "The dice will be rolled #{input} times "
+		# @answer = input
+		# puts @answer.to_i
 	end
 
 	def result
 		count = 0
-		until count = @answer do
+		until count == @answer
+			result = side
+			#hello.side
 			puts @side
 			count = count + 1			
 		end
+
+	# def result
+	# 	@answer.times do 
+	# 		puts @side
+	# 		count = count + 1			
+	# 	end
 		
 		
 		
@@ -42,8 +51,8 @@ class SnakeEyes
 end
 
 dice_roll = SnakeEyes.new
-dice_roll.side
-dice_roll.roll(6)
+#dice_roll.side
+dice_roll.roll_number(6)
 dice_roll.result
 #dice_roll.side
 # class CrownAndAnchor
