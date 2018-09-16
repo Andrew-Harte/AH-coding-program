@@ -1,41 +1,34 @@
 class SnakeEyes
 
-	
-	# def initialize
-	# 	@side = side
-	# 	@answer = answer
-	# end
+	#attr_accessor input:
+
+	def initialize (input)
+		@input = input
+	end
+
+	def roll
+		puts "You are rolling the dice #{@input} times"
+		count = 0
+		until count == @input
+			puts side
+			count = count+1
+		end
+	end
 
 	def side
-		@side = (Random.rand(6))
-		#puts @side
+		(Random.rand(1..6))
 	end
 
-	def roll_number(input)
-		@answer = input
-		puts "The dice will be rolled #{input} times "
-		# @answer = input
-		# puts @answer.to_i
-	end
+end
 
-	def result
-		count = 0
-		until count == @answer
-			result = side
-			#hello.side
-			puts @side
-			count = count + 1			
-		end
 
-	# def result
-	# 	@answer.times do 
-	# 		puts @side
-	# 		count = count + 1			
-	# 	end
-		
-		
-		
+class CrownAndAnchor < SnakeEyes
+	def side 
+		side = {1 => "crown", 2 => "anchor", 3 => "heart", 
+						4 => "club", 5 => "diamond", 6 => "spade"}
 	end
+	
+end
 
 
 	# def dice(times)
@@ -48,14 +41,11 @@ class SnakeEyes
 	# 	puts output
 	# end
 
-end
+# dice_roll = SnakeEyes.new(5)
+# dice_roll.roll
+crown_roll = CrownAndAnchor.new(2)
+crown_roll.roll
 
-dice_roll = SnakeEyes.new
-#dice_roll.side
-dice_roll.roll_number(6)
-dice_roll.result
-#dice_roll.side
-# class CrownAndAnchor
 
 # 	require :SnakeEyes;
 
